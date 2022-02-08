@@ -30,7 +30,7 @@ class TimeController():
             }
             
         self.__escolha = TimeView.opcoes()
-        if self.escolha == "2":
+        if self.escolha in self.__escolhas:
             self.__escolhas[self.__escolha]()
             pass
         self.__escolhas[self.__escolha]()
