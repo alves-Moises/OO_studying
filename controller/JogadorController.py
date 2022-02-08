@@ -45,10 +45,11 @@ class JogadorController():
 
 
     def tela_opcoes(self):
-        print("asda")
-        escolhas = {
-            "1": "listar_jgoadores",
+        self.__escolhas = {
+            "1": view.JogadorView.JogadorView.listar_jogadores,
             "2": "exibir_jogador especifico",
-            "3": JogadorController.adicionar_jogador()
+            "3": JogadorController.adicionar_jogador,
+            "4": "remover_jogador"
         }
-        view.JogadorView.JogadorView.listar_jogadores()
+        self.__escolha = view.JogadorView.JogadorView.tela_opcoes(self)
+        self.__escolhas[self.__escolha](self)
