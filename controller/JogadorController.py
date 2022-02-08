@@ -5,7 +5,10 @@ import view.AbstractView
 
 class JogadorController():
     def __init__(self):
-        self.__jogadores = []
+        self.__jogadores = ['asd']
+
+    def getJogadores(self):
+        return self.__jogadores
 
     def adicionar_jogador(self):
         self.__nome = input("Digite o nome: ")
