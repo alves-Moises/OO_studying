@@ -11,8 +11,6 @@ class TimeController():
         self.__escolhas = {
             "1": JogadorController.tela_opcoes, 
             "2": TimeController.opcoes,
-            "3": JogadorController.adicionar_jogador,
-            "4": JogadorController.listar_jogadores
             }
         self.__menu = TimeView()
         self.__escolha = self.__menu.menu_principal()
