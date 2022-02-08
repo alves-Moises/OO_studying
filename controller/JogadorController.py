@@ -26,7 +26,6 @@ class JogadorController():
 
     def listar_jogadores(self):
         i = 0
-        print(self.__jogadores)
         for jogador in self.__jogadores:
             print(i, 'ª:', end=' ')
             # view.JogadorView.JogadorView.exibir_jogador(jogador)
