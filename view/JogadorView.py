@@ -1,9 +1,10 @@
 import controller.JogadorController
 
 class JogadorView():
+    def __init__():
+        pass
 
     def tela_opcoes(self):
-        
         print("Selecione a opção desejada:")
         print("[1] Listar jogadores")
         print("[2] Exibir jogador específico")
