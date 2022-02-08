@@ -10,5 +10,3 @@ class OrcamentoController():
     
     def ver_saldo(self):
         view.OrcamentoView.Orcamento.ver_gastos()
-
-        blz

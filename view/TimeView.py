@@ -4,6 +4,7 @@ class TimeView():
     def __init__(self):
         pass
 
+    #opces time
     def opcoes(self):
         print("Selecione a opção desejada")
         print("[1] Listar_jogadores")
@@ -21,7 +22,5 @@ class TimeView():
         print("Menu principal: ")
         print("[1] Opcões jogadores")
         print("[2] Opcões time")
-        print("[3] Adicionar jogador")
-        print("[4] Listar jogadores")
         print("[0] Fechar")
         return input()
