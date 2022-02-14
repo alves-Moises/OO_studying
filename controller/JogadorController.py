@@ -1,11 +1,13 @@
 from entity.Jogador import Jogador
 import view.JogadorView
 import view.AbstractView
+from controller import JogadorController
 # from controller import SystemController
 
 class JogadorController():
     def __init__(self):
-        self.__jogadores = ['asd']
+
+        self.__jogadores = ['joao']
 
     def getJogadores(self):
         return self.__jogadores
@@ -29,10 +31,11 @@ class JogadorController():
 
     def listar_jogadores(self):
         i = 0
-        for jogador in self.__jogadores:
-            print(i, 'ª:', end=' ')
-            # view.JogadorView.JogadorView.exibir_jogador(jogador)
-            i += 1
+        print("listar_jogadores")
+        # for jogador in self.__jogadores:
+        #     print(i, 'ª:', end=' ')
+        #     # view.JogadorView.JogadorView.exibir_jogador(jogador)
+        #     i += 1
 
     def alterar_jogador(self, jogador):
         self.jogador.__nome = view.AbstractView.AbstractView.mensagem_input("Digite o nome: ")

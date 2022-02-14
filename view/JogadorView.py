@@ -16,8 +16,8 @@ class JogadorView():
 
     def listar_jogadores(self):
         print("Listando jogadores") 
-
-        for jogador in controller.JogadorController.JogadorController.getJogadores():
+        controller.JogadorController.JogadorController.getJogadores()
+        for jogador in controller.JogadorController.JogadorController.getJogadores(self):
             print(jogador)
         
     def exibir_jogador(self, jogador):
