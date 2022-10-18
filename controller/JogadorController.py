@@ -1,26 +1,34 @@
 from entity.Jogador import Jogador
 import view.JogadorView
 import view.AbstractView
-from controller import JogadorController
+# from controller import JogadorController
 # from controller import SystemController
-
+    
 class JogadorController():
     def __init__(self):
+        self.__jogadores = list()
 
-        self.__jogadores = ['joao']
 
-    def getJogadores(self):
+    # def getJogadores(self):
+    #     return self.__jogadores
+    @property
+    def jogadores(self):
         return self.__jogadores
 
-    def adicionar_jogador(self):
-        self.__nome = input("Digite o nome: ")
-        self.__idade = int(input("digite idade: "))
+    @jogadores.setter
+    def jogadores(self, jogador):
+        self.__jogadores += jogador
 
-        self.__jogador = Jogador(nome = self.__nome, idade = self.__idade)
-        if (self.__jogador in self.__jogadores):
-            view.JogadorView.exibir_mensagem("Atenção: Jogador já existe")
-            return
-        self.__jogadores.append(self.__jogador)
+    def adicionar_jogador(self):
+        self.__name = input("Digite o nome: ")
+        self.__age = int(input("digite idade: "))
+        self.__position = input("Digite a posicao: ")
+
+        self.__jogador = Jogador(nome = self.__name, idade = self.__age, posicao=self.__position)
+        # print(self.__jogador.nome)
+        self.__jogadores.setter(self, self.__jogador)
+        return self.__jogador
+        print('Jogador adicionado com sucesso')
 
             
     def exibir_jogador(self, jogador):
@@ -31,7 +39,8 @@ class JogadorController():
 
     def listar_jogadores(self):
         i = 0
-        print("listar_jogadores")
+        if self.__jogadores == []:
+            view.AbstractView.AbstractView.mensagem_output("Lista de jogadores vazia.")
         # for jogador in self.__jogadores:
         #     print(i, 'ª:', end=' ')
         #     # view.JogadorView.JogadorView.exibir_jogador(jogador)
@@ -57,5 +66,15 @@ class JogadorController():
             "3": JogadorController.adicionar_jogador,
             "4": "remover_jogador"
         }
-        self.__escolha = view.JogadorView.JogadorView.tela_opcoes(self)
+        if view.JogadorView.JogadorView.tela_opcoes(self) == '1':
+            JogadorController.listar_jogadores(self)
+
+        if view.JogadorView.JogadorView.tela_opcoes(self) == '2':
+            pass
+
+        if view.JogadorView.JogadorView.tela_opcoes(self) == '3':
+            JogadorController.jogadores =  JogadorController.adicionar_jogador(self)
+        print('sucesso')
         self.__escolhas[self.__escolha](self)
+
+    

@@ -15,3 +15,9 @@ class AbstractView(ABC):
     @abstractmethod
     def mensagem_input(self, msg):
         return input(msg)
+
+    @abstractmethod
+    def mensagem_output(self, msg):
+        print('=' *30)
+        print('=' *30)
+        print(msg)

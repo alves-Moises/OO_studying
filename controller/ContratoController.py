@@ -1,6 +1,7 @@
 import entity.Contrato
 import entity.Jogador
-class ContratoController():
+
+class ContratoController:
     def __init__(self):
         self.__contratos = []
 
@@ -10,6 +11,6 @@ class ContratoController():
         self.__contratos.append(novo_contrato)
         entity.Jogador.Jogador.contrato = novo_contrato
 
-    def removerContrato(self, contrato:entity.Contrato.Contrato, jogador:entity.Jogador.Jogador):
+    def removerContrato(self, contrato=entity.Contrato.Contrato, jogador=entity.Jogador.Jogador):
         self.__contratos.pop(contrato)
         del(entity.Jogador.Jogador.contrato)
