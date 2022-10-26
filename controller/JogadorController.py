@@ -50,6 +50,7 @@ class JogadorController():
         self.jogador.__nome = view.AbstractView.AbstractView.mensagem_input("Digite o nome: ")
         self.jogador.__idade = view.AbstractView.AbstractView.mensagem_input("Digite a idade: ")
         self.jogador.__posicao = view.AbstractView.AbstractView.mensagem_input("Digite a nova posicao: ")
+        self.jogador.__camisa = view.AbstractView.AbstractView.mensagem_input("Digite o numero da camisa: ")
 
     def remover_jogador(self, jogador):
         if jogador in self.__jogadores:
@@ -60,6 +61,7 @@ class JogadorController():
 
 
     def tela_opcoes(self):
+        print('asd')
         self.__escolhas = {
             "1": view.JogadorView.JogadorView.listar_jogadores,
             "2": "exibir_jogador especifico",
