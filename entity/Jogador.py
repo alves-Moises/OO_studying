@@ -1,10 +1,11 @@
 class Jogador:
 
-    def __init__(self, nome='teste', idade=123, posicao='reserva'):
+    def __init__(self, nome='teste', idade=123, posicao='reserva', camisa=0):
         self.__nome = nome
         self.__idade = idade
         self.__contrato = None
         self.__posicao = posicao
+        self.__camisa = camisa
 
     @property
     def nome(self):
