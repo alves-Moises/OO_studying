@@ -16,7 +16,7 @@ class Time:
         # print(self.__nome)
         # print(self.__orcamento.saldo)
 
-        self.__time_controller = TimeController
+        self.__time_controller = TimeController()
         self.__time_controller.menu_principal()
         self.__contrato_controller = ContratoController()
         
