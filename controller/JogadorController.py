@@ -23,12 +23,13 @@ class JogadorController():
         self.__name = input("Digite o nome: ")
         self.__age = int(input("digite idade: "))
         self.__position = input("Digite a posicao: ")
+        self.__camisa = int(input('Digite o numero da camisa'))
 
-        self.__jogador = Jogador(nome = self.__name, idade = self.__age, posicao=self.__position)
+        self.__jogador = Jogador(nome = self.__name, idade = self.__age, posicao=self.__position, camisa=self.__camisa)
         # print(self.__jogador.nome)
         self.__jogadores.setter(self, self.__jogador)
-        return self.__jogador
         print('Jogador adicionado com sucesso')
+        return self.__jogador
 
             
     def exibir_jogador(self, jogador):
@@ -60,23 +61,4 @@ class JogadorController():
         view.JogadorView.JogadorView.exibir_mensagem("Jogador não existe...")
 
 
-    def tela_opcoes(self):
-        print('asd')
-        self.__escolhas = {
-            "1": view.JogadorView.JogadorView.listar_jogadores,
-            "2": "exibir_jogador especifico",
-            "3": JogadorController.adicionar_jogador,
-            "4": "remover_jogador"
-        }
-        if view.JogadorView.JogadorView.tela_opcoes(self) == '1':
-            JogadorController.listar_jogadores(self)
-
-        if view.JogadorView.JogadorView.tela_opcoes(self) == '2':
-            pass
-
-        if view.JogadorView.JogadorView.tela_opcoes(self) == '3':
-            JogadorController.jogadores =  JogadorController.adicionar_jogador(self)
-        print('sucesso')
-        self.__escolhas[self.__escolha](self)
-
-    
+ 
